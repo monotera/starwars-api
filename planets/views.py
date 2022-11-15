@@ -1,6 +1,7 @@
-from .serializer import PlanetSerializer
 from rest_framework import viewsets
+
 from .models import Planet
+from .serializer import PlanetSerializer
 
 
 class PlanetViewSet(viewsets.ModelViewSet):
