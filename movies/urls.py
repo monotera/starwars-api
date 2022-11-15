@@ -1,7 +1,6 @@
-from django.urls import path
-from . import views
+from movies.views import MovieViewSet
+from rest_framework.routers import DefaultRouter
 
-# URLconf
-urlpatterns = [
-    #path('hello/', views.hello_world)
-]
+router = DefaultRouter()
+router.register(r'', MovieViewSet, basename='')
+urlpatterns = router.urls
