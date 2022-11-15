@@ -2,6 +2,7 @@ from django.db import models
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
 from django.urls import reverse
+from movies.models import Movie
 # Create your models here.
 
 class Character(models.Model):
@@ -13,6 +14,7 @@ class Character(models.Model):
     skin_color = models.CharField(max_length=150)
     eye_color = models.CharField(max_length=150)
     gender = models.CharField(max_length=7)
+    movies = models.ManyToManyField(Movie, related_name='movies')
     #films
 
     def __str__(self) -> str:
