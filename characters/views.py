@@ -1,20 +1,11 @@
-from django.http import HttpResponse
+from django.contrib.auth.models import User
+from django.shortcuts import get_object_or_404
+from characters.serializer import CharacterSerializer
+from rest_framework import viewsets
 from .models import Character
-from.serializer import CharacterSerializer
-from movies.models import Movie
-from planets.models import Planet
-from rest_framework import serializers
-from movies.serializer import MovieSerializer
-from rest_framework.request import Request
-from rest_framework.renderers import JSONRenderer
+from rest_framework.response import Response
 # Create your views here.
-def hello_world(request):
-    serializer_context = {
-        'request': Request(request),
-    }
-    ch = Character.objects.all().first()
-    #print(luke.planets.al
-    s = CharacterSerializer(ch,context=serializer_context)
-    json = JSONRenderer().render(s.data)
-    print(json)
-    return HttpResponse(json, content_type="application/json")
+
+class CharacterViewSet(viewsets.ModelViewSet):
+        queryset = Character.objects.all()
+        serializer_class  = CharacterSerializer

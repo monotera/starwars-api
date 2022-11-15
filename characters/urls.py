@@ -1,7 +1,6 @@
-from django.urls import path
-from . import views
+from characters.views import CharacterViewSet
+from rest_framework.routers import DefaultRouter
 
-# URLconf
-urlpatterns = [
-    path('', views.hello_world)
-]
+router = DefaultRouter()
+router.register(r'', CharacterViewSet, basename='')
+urlpatterns = router.urls

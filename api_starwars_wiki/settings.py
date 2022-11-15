@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'rest_framework',
+    'django_filters',
     'characters',
     'movies',
     'planets'
