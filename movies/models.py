@@ -9,7 +9,7 @@ class Movie(models.Model):
     opening_text = models.CharField(max_length=350)
     producer = models.CharField(max_length=150)
     director = models.CharField(max_length=250)
-    planets = models.ManyToManyField(Planet)
+    planets = models.ManyToManyField(Planet, related_name="movie_planet", blank=True)
     def __str__(self) -> str:
-        return f'Movie: name = {self.name}, opening_text = {self.opening_text}, producer = {self.producer},' \
-               f' director = {self.director}'
+        return f'Movie: name = {self.name},\n opening_text = {self.opening_text}\n, producer = {self.producer}\n,' \
+               f' director = {self.director}\n'

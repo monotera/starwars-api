@@ -14,6 +14,6 @@ class Planet(models.Model):
     population = models.IntegerField()
 
     def __str__(self) -> str:
-        return f'Movie: name = {self.name}, rotation_period = {str(self.rotation_period)}, orbital_period = {str(self.orbital_period)}, ' \
+        return f'Planet: name = {self.name}, rotation_period = {str(self.rotation_period)}, orbital_period = {str(self.orbital_period)}, ' \
                f'diameter = {str(self.diameter)}, climate = {self.climate}, gravity = {self.gravity}, terrain = {self.terrain}, ' \
                f'surface_water = {str(self.surface_water)}, population = {self.population}'
