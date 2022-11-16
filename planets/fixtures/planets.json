@@ -1,0 +1,47 @@
+[
+  {
+    "model": "planets.planet",
+    "pk": 11,
+    "fields": {
+      "name": "Hothest",
+      "rotation_period": 23,
+      "orbital_period": 549,
+      "diameter": 7200,
+      "climate": "frozen",
+      "gravity": "1.1 standard",
+      "terrain": "tundra, ice caves, mountain ranges",
+      "surface_water": 100,
+      "population": -1
+    }
+  },
+  {
+    "model": "planets.planet",
+    "pk": 12,
+    "fields": {
+      "name": "Tespin",
+      "rotation_period": 12,
+      "orbital_period": 5110,
+      "diameter": 118000,
+      "climate": "temperate",
+      "gravity": "1.5 (surface), 1 standard (Cloud City)",
+      "terrain": "gas giant",
+      "surface_water": 0,
+      "population": 6000000
+    }
+  },
+  {
+    "model": "planets.planet",
+    "pk": 13,
+    "fields": {
+      "name": "Ord Mantest",
+      "rotation_period": 26,
+      "orbital_period": 334,
+      "diameter": 14050,
+      "climate": "temperate",
+      "gravity": "1 standard",
+      "terrain": "plains, seas, mesas",
+      "surface_water": 10,
+      "population": 4000000000
+    }
+  }
+]
