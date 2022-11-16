@@ -1,2 +1,31 @@
 # Star wars API
-Desarrollar una API Rest para un sitio web para los fanáticos de star wars.
+
+Starwars API is a basic Django based API for all the star wars fans. This API allows the user to to see a list of all the characters related to the Star Wars universe, each character allows to see the movies in which said character participates and each movie has a detail where the opening text is shown, the planets that are shown in each film, the director and the producers.
+
+## Prerequisites
+- You must have python3.8 or higher
+- The machine must have make install.
+- If you want to use the make file, you need to have WSL or be in a Debian distribution.
+
+## Running the API
+
+It's quite easy, you just have to run the command `make serve`. This will install all the requiered dependencies, it will create a virtual enviorment and it will run the Django command `python3 manage.py runserve` on the virtual env.</br>
+
+If you want to try the endpoints there is a postman collection in the `postman` directory.
+
+## Testing
+
+There are two kind of test, the first one will test the functionalities of the app using Django testing and the second one will make a black-box test of the endpoints using pytest. For running this test you can use the following commands.
+
+### Run all test
+`make test`
+
+### Run planets test
+`make test_planets`
+
+### Run movies test
+`make test_movies`
+
+### Run characters test
+`make test_characters`
+
