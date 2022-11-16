@@ -1,0 +1,35 @@
+[
+  {
+    "model": "characters.character",
+    "pk": 3,
+    "fields": {
+      "name": "Luke SkyTesting",
+      "height": "72.0",
+      "mass": "177.0",
+      "hair_color": "blond",
+      "skin_color": "fair",
+      "eye_color": "blue",
+      "gender": "female",
+      "movies": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "characters.character",
+    "pk": 5,
+    "fields": {
+      "name": "Anakin TestWalker",
+      "height": "572.0",
+      "mass": "27.0",
+      "hair_color": "brown",
+      "skin_color": "brown",
+      "eye_color": "blue",
+      "gender": "male",
+      "movies": [
+        35,
+        4
+      ]
+    }
+  }
+]

@@ -17,6 +17,7 @@ class CharacterViewSet(viewsets.ModelViewSet):
     filterset_class = CharacterFilter
 
     def create(self, request, *args, **kwargs):
+        request.data.pop('movies', '')
         movies_ids = request.data.pop('movies_ids', [])
         character_validator = CharacterSerializer(data=request.data)
         if character_validator.is_valid():

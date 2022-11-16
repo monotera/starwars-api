@@ -1,0 +1,29 @@
+[
+  {
+    "model": "movies.movie",
+    "pk": 4,
+    "fields": {
+      "name": "The Test Strikes Back",
+      "opening_text": "It is a dark time for the\\r\\nRebellion. Although the Death\\r\\nStar has been destroyed,\\r\\nImperial troops have driven the\\r\\nRebel forces from their hidden\\r\\nbase and pursued them across\\r\\nthe galaxy.\\r\\n\\r\\nEvading the dreaded Imperial\\r\\nStarfleet, a group of freedom\\r\\nfighters led by Luke Skywalker\\r\\nhas established a new secret\\r\\nbase on t",
+      "producer": "Gary Kurtz, Rick McCallum",
+      "director": "Irvin Kershner",
+      "planets": [
+        11,
+        12
+      ]
+    }
+  },
+  {
+    "model": "movies.movie",
+    "pk": 35,
+    "fields": {
+      "name": "A New Test",
+      "opening_text": "It is a period of civil war.\r\nRebel spaceships, striking\r\nfrom a hidden base, have won\r\ntheir first victory against\r\nthe evil Galactic Empire.\r\n\r\nDuring the battle, Rebel\r\nspies managed to steal secret\r\nplans to the Empire's\r\nultimate weapon.",
+      "producer": "Gary Kurtz, Rick McCallum",
+      "director": "George Lucas",
+      "planets": [
+        13
+      ]
+    }
+  }
+]

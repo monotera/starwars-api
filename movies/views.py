@@ -11,6 +11,7 @@ class MovieViewSet(viewsets.ModelViewSet):
     serializer_class = MovieSerializer
 
     def create(self, request, *args, **kwargs):
+        request.data.pop('planets','')
         planets_ids = request.data.pop('planets_ids', [])
         movie_validator = MovieSerializer(data=request.data)
         if movie_validator.is_valid():

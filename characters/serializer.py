@@ -9,4 +9,4 @@ class CharacterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Character
-        fields = ['name', 'height', 'mass', 'hair_color', 'skin_color', 'eye_color', 'gender', 'movies']
+        fields = ['id','name', 'height', 'mass', 'hair_color', 'skin_color', 'eye_color', 'gender', 'movies']

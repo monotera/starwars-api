@@ -19,5 +19,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('characters/',include('characters.urls')),
     path('movies/', include('movies.urls')),
-    path('planets/', include('planets.urls'))
+    path('planets/', include('planets.urls'), name='planets-url')
 ]
