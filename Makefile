@@ -18,16 +18,16 @@ serve: prepare_venv
 
 test: prepare_venv
 	${PYTHON} -m manage test
-	${PYTHON} -m pytest -s
+	${PYTHON} -m pytest -v
 
 test_planets: prepare_venv
 	${PYTHON} -m manage test planets
-	${PYTHON} -m pytest -s planets
+	${PYTHON} -m pytest -v planets
 
 test_movies: prepare_venv
 	${PYTHON} -m manage test movies
-	${PYTHON} -m pytest -s movies
+	${PYTHON} -m pytest -v movies
 
 test_characters: prepare_venv
 	${PYTHON} -m manage test characters
-	${PYTHON} -m pytest -s characters
+	${PYTHON} -m pytest -v characters
