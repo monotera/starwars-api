@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'rest_framework',
     'django_filters',
+    'drf_yasg',
     'characters',
     'movies',
     'planets'

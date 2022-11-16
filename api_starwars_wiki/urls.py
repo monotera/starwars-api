@@ -15,9 +15,30 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.urls import re_path
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+from rest_framework import permissions
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="Star wars API",
+        default_version='v1',
+        description="Starwars API is a basic Django based API for all the star wars fans. This API allows the user to to see a list of all the characters related to the Star Wars universe, each character allows to see the movies in which said character participates and each movie has a detail where the opening text is shown, the planets that are shown in each film, the director and the producers.",
+        terms_of_service="https://www.google.com/policies/terms/",
+        contact=openapi.Contact(email="nelson.a.mosquera@gmail.com"),
+        license=openapi.License(name="MIT"),
+    ),
+    public=True,
+    permission_classes=[permissions.AllowAny],
+)
+
 urlpatterns = [
+    re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
+    re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    re_path(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('admin/', admin.site.urls),
-    path('characters/',include('characters.urls')),
-    path('movies/', include('movies.urls')),
-    path('planets/', include('planets.urls'), name='planets-url')
+    path('characters/', include('characters.urls'), name='characters'),
+    path('movies/', include('movies.urls'), name='movies'),
+    path('planets/', include('planets.urls'), name='planets')
 ]

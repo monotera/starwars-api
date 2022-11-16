@@ -13,6 +13,10 @@ $(VENV_NAME)/bin/activate: requirements.txt
 	${PYTHON} -m pip install -r requirements.txt
 	sudo touch $(VENV_NAME)/bin/activate
 
+migrate: prepare_venv
+	${PYTHON} -m manage makemigrations
+	${PYTHON} -m manage migrate
+
 serve: prepare_venv
 	${PYTHON} -m manage runserver
 
