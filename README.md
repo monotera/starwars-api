@@ -9,7 +9,7 @@ Starwars API is a basic Django based API for all the star wars fans. This API al
 
 ## Running the API
 
-It's quite easy, you just have to run the command `make serve`. This will install all the requiered dependencies, it will create a virtual enviorment and it will run the Django command `python3 manage.py runserve` on the virtual env.</br>
+It's quite easy, you just have to run the command `make serve`. This will install all the requiered dependencies, it will create a virtual enviorment and it will run the Django command `python3 manage.py runserve` on the virtual env. If it's the first time you are running it, you must run the command `make migrate`.</br>
 
 If you want to try the endpoints there is a postman collection in the `postman` directory.
 
