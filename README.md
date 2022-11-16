@@ -2,7 +2,7 @@
 
 Starwars API is a basic Django based API for all the star wars fans. This API allows the user to to see a list of all the characters related to the Star Wars universe, each character allows to see the movies in which said character participates and each movie has a detail where the opening text is shown, the planets that are shown in each film, the director and the producers.
 
-## Prerequisites
+## Requirements
 - You must have python3.8 or higher
 - The machine must have make install.
 - If you want to use the make file, you need to have WSL or be in a Debian distribution.
