@@ -15,7 +15,7 @@ If you want to try the endpoints there is a postman collection in the `postman` 
 
 ## Testing
 
-There are two kind of test, the first one will test the functionalities of the app using Django testing and the second one will make a black-box test of the endpoints using pytest. For running this test you can use the following commands.
+There are two kind of test, the first one will test the functionalities of the app using Django testing and the second one will make a black-box test of the endpoints using pytest. For running this test you can use the following commands. For more information checkout the API doc in `http://127.0.0.1:8000/swagger/` (the api must be running).
 
 ### Run all test
 `make test`
